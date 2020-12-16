@@ -6,7 +6,9 @@ export default function Courses() {
     return (
         <Fragment>
             <HeaderContainer />
-            <h1>Courses page</h1>
+            <div style={{padding: '0 50px', height: '500px'}}>
+                <h1 style={{textAlign: 'center'}}>Courses page</h1>
+            </div>
             <FooterContainer />
         </Fragment>
     )

@@ -7,8 +7,8 @@ export default function Home () {
     return(
         <Fragment>
             <HeaderContainer />
-            <GalaryContainer />
-            <FooterContainer />
+             <GalaryContainer /> 
+           <FooterContainer />
         </Fragment>
         
     );

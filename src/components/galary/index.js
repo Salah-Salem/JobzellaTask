@@ -3,6 +3,7 @@ import bookmark from '../../icons/bookmark-solid.svg';
 import share from '../../icons/share-alt-solid.svg';
 import { 
         Container, 
+        Row,
         Frame, 
         Image,
         TextPart,
@@ -21,6 +22,9 @@ import {
 export default function Galary ({ children, ...restProps}){
     return (
         <Container {...restProps}> {children} </Container>);
+}
+Galary.Row = function GalaryRow({ children, ...restProps}) {
+    return <Row {...restProps}> {children} </Row>;
 }
 
 Galary.Frame = function GalaryFrame ({ children, ...restProps}){

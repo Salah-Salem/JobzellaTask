@@ -7,9 +7,26 @@ export const Global = styled.div `
 
 
 export const Container = styled.div `
-    display: flex;
     background-color: #e5e5e5;
-    padding-top:20px;
+    padding:20px 50px 0 50px;
+    overflow: hidden;
+
+`;
+
+export const Row = styled.div `
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    @media (max-width: 600px) {
+        grid-template-columns: auto;
+    }
+    @media (max-width: 768px){
+        grid-template-columns: auto;
+    }
+    @media (max-width: 992px){
+        grid-template-columns: auto;
+    }
 `;
 
 export const LogoSec = styled.div `
@@ -20,17 +37,32 @@ export const GeneInfo = styled.div `
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 768px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-top: 2px solid #131313;
+        border-bottom: 2px solid #131313;
+        padding: 20px 0;
+    }
+
+    @media (max-width: 600px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-top: 2px solid #131313;
+        border-bottom: 2px solid #131313;
+        padding: 20px 0;
+    }
+    @media (max-width: 992px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-top: 2px solid #131313;
+        border-bottom: 2px solid #131313;
+        padding: 20px 0;
+    }
 `;
 export const Advertisement = styled(Global) `
     flex-direction: column;
-`;
-export const Row = styled.div `
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    margin: auto 50px;
-    padding-top: 25px;
 `;
 
 export const Link = styled.a `
@@ -46,6 +78,13 @@ export const Title = styled.h2 `
     text-align: center;
     line-height: 0;
     text-transform: uppercase;
+
+    @media (max-width: 992px){
+        font-size: 16px;
+    }
+    @media (max-width: 1200px){
+        font-size: 16px;
+    }
 `;
 export const SubTitle = styled.h3 `
     font-size: 15px;
@@ -107,12 +146,28 @@ export const Span = styled.span `
 export const StoreTitle = styled.h2 `
     font-size: 22px;
     margin: 0;
+
+    @media (max-width: 992px){
+        font-size: 15px;
+    }
+
+    @media (max-width: 1200px){
+        font-size: 15px;
+    }
 `;
 
 export const SmallText = styled.p `
     font-size: 10px;
     text-transform: uppercase;
     margin: 0;
+
+    @media (max-width: 992px){
+        font-size: 8px;
+    }
+
+    @media (max-width: 1200px){
+        font-size: 8px;
+    }
 `;
 export const Lang = styled.div `
     padding: 20px;
@@ -144,20 +199,44 @@ export const Caret = styled.img `
     height: 15px;
 `;
 
-export const Logo = styled.img `
+export const Logo = styled.div `
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    a{
+        text-decoration: none;
+    }
+    h2 {
+        color: black;
+        text-align: center;
+        margin: 0;
+    }
+
+    @media (max-width: 992px){
+        width: 25%;
+        h2{
+            font-size: 18px;
+        }
 `;
 
 export const SocialMedia = styled.div `
     display: flex;
     margin: 50px auto 0;
     align-items: center;
+
+    // @media (max-width: 600px){
+    //     margin: 0 auto;
+    // }
+    // @media (max-width: 768px){
+    //     margin: 0 auto;
+    // }
+    // @media (max-width: 992px){
+    //     margin: 0 auto;
+    // }
 `;
 
-export const Social = styled(Logo)`
+export const Social = styled.img`
     height: 45px;
     width: 30px;
     margin: 0 3px;

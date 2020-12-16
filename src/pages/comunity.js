@@ -6,7 +6,9 @@ export default function Comunity() {
     return (
         <Fragment>
             <HeaderContainer />
-            <h1>Comunity page</h1>
+            <div style={{padding: '0 50px', height: '500px'}}>
+                <h1 style={{textAlign: 'center'}}>Comunity page</h1>
+            </div>
             <FooterContainer />
         </Fragment>
     )

@@ -6,7 +6,9 @@ export default function Profile() {
     return (
         <Fragment>
             <HeaderContainer />
-            <h1>Profile page</h1>
+            <div style={{padding: '0 50px', height: '500px'}}>
+                <h1 style={{textAlign: 'center'}}>Profile page</h1>
+            </div>
             <FooterContainer />
         </Fragment>
     )

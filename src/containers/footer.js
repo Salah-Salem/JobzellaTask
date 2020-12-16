@@ -1,7 +1,6 @@
 import React from 'react';
 import * as ROUTES from '../constants/routes';
 import { Footer } from '../components';
-import logo from '../logo.svg';
 import facebook from '../icons/facebook.svg';
 import twitter from '../icons/twitter.svg';
 import youtube from '../icons/youtube.svg';
@@ -15,8 +14,7 @@ export function FooterContainer () {
         <Footer>
             <Footer.Row>
                 <Footer.LogoSec>
-                    <Footer.Logo to={ROUTES.HOME} src={logo} alt="Jobzella" />
-                    <Footer.Title>House </Footer.Title>
+                    <Footer.Logo to={ROUTES.HOME}></Footer.Logo>
                     <Footer.SocialMedia>
                         <Footer.Social to={ROUTES.HOME} src={facebook} alt="facebook" />
                         <Footer.Social to={ROUTES.HOME} src={instagram} alt="instagram"className="custom" />

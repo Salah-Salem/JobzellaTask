@@ -4,6 +4,7 @@ import share from '../../icons/share-alt-solid.svg';
 
 import { 
         Container, 
+        Row,
         Side,
         Descrption,
         Frame,
@@ -28,7 +29,9 @@ export default function Details ({ children, ...restProps}){
     return (
         <Container {...restProps}> {children} </Container>);
 }
-
+Details.Row = function DetailsRow ({ children, ...restProps}){
+    return <Row {...restProps}> {children} </Row>;
+}
 Details.Side = function DetailsSide ({ children, ...restProps}){
     return <Side {...restProps}> {children} </Side>;
 }

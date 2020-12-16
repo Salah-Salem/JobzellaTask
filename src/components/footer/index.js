@@ -3,6 +3,7 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 import caret from "../../icons/caret-down.svg";
 import iphone from "../../icons/iphone.svg";
 import google_play from '../../icons/google-play.svg';
+import logo from '../../logo.svg';
 
 import { 
     Container, 
@@ -119,11 +120,16 @@ Footer.Social = function FooterSocial({ to, ...restProps}) {
     );
 } 
 
-Footer.Logo = function FooterLogo({ to, ...restProps}) {
+Footer.Logo = function FooterLogo({ to,children , ...restProps}) {
     return (
-        <ReactRouterLink to ={to} >
-            <Logo {...restProps} />
-        </ReactRouterLink>
+        <Logo>
+            <ReactRouterLink to ={to} >
+                <img src={logo} alt="Jobzella" />
+                <h2 className="title">House</h2>
+                {children}
+            </ReactRouterLink>
+        </Logo>
+
     );
 }
 

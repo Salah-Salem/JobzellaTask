@@ -7,22 +7,59 @@ export const Global = styled.div `
 `;
 
 export const Container = styled.div `
-    display: flex;
-    margin: auto 50px;
-    padding-top: 25px;
+    padding: 20px 50px 0 50px;
+
+    @media(max-width: 992px){
+        padding: 20px 0;
+    }
 `;
+
+export const Row = styled.div `
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+    grid-gap:10px;
+
+    @media (max-width: 992px){
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+`;
+
 export const Side = styled(Global)`
     height: 1000px;
-    flex-shrink: 0;
-    flex-basis: 35%;
     overflow: auto;
+
+    @media(max-width: 992px){
+        display: flex;
+        flex-direction: row;
+        height: 420px;
+        width: 100% !important;
+
+    }
 `;
-export const Descrption = styled(Side) `flex-basis: 65%;`;
+export const Descrption = styled.div `
+    overflow: auto;
+    height: 1000px;
+
+    @media (max-width: 992px){
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        width: 100% !important;
+    }
+`;
 
 export const Frame = styled(Global) `
     border-radius: 20px;
     margin-bottom: 10px;
     background-color: white;
+    width: fit-content;
+
+    @media(max-width: 992px){
+        margin: 5px;
+        width: fit-content;
+    }
 `;
 
 export const DescFrame = styled(Frame) `padding: 20px`;
@@ -30,10 +67,10 @@ export const DescFrame = styled(Frame) `padding: 20px`;
 export const Image = styled.img `
     height: 200px;
     border-radius: 20px;
+    width: 100%;
 `;
 
 export const TextPart = styled(Global) `
-   
     padding: 0 20px;
 `;
 
@@ -42,12 +79,20 @@ export const Title = styled.h1 `
     margin-top: 10px;
     margin-bottom: 0;
     color: #8686df;
+
+    @media(max-width: 992px){
+        font-size: 16px;
+    }
 `;
 
 export const SubTitle = styled.h2 `
     font-size: 15px;
     margin: 0;
     color: #9b9b9a;
+
+    @media(max-width: 992px){
+        font-size: 14px;
+    }
 `;
 
 export const Text = styled.p `
@@ -67,9 +112,19 @@ export const ButtonPart = styled.div `
     padding: 0 20px;
     align-items: center;
     margin-bottom: 10px;
+
+    @media(max-width: 992px){
+        padding: 0 15px;
+    }
 `;
 
-export const BtnIcon = styled.div `display: flex;`;
+export const BtnIcon = styled.div `
+    display: flex;
+    
+    @media(max-width: 992px){
+        padding-right: 20px;
+    }
+`;
 
 export const Save = styled.button `
     display: flex;
@@ -83,19 +138,18 @@ export const Save = styled.button `
     img{
         margin-right: 10px;
         width: 15px;
-`;
-export const Share = styled.button `
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #9b9b9a;
-    border: 0;
-    background: none;
-    cursor: pointer;
+    }
+    @media (max-width: 992px){
+        font-size: 15px;
 
-    img{
-        margin-right: 10px;
-        width: 15px;
+        img{
+            margin-right: 8px;
+            width: 12px;
+        }
+    }
+`;
+export const Share = styled(Save) `
+
 `;
 
 export const ButtonLink = styled(ReactRouterLink)`
@@ -110,6 +164,11 @@ export const ButtonLink = styled(ReactRouterLink)`
     outline: 0;
     text-transform: uppercase;
     text-decoration: none;
+
+    @media(max-width: 992px){
+        padding: 12px 35px;
+        font-size: 15px;
+    }
 `;
 
 export const DescHeader = styled.div `
@@ -117,6 +176,10 @@ export const DescHeader = styled.div `
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+
+    @media(max-width:992px){
+        margin-bottom: 0px;
+    }
 `;
 
 export const DescImage = styled(Image) `
